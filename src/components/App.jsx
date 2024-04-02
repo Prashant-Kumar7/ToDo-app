@@ -6,6 +6,9 @@ function App() {
   const [items, setItems] = useState([]);
 
   function addItem(inputText) {
+    if(inputText.length===0){
+      return alert("input field cannot be empty")
+    }
     setItems(prevItems => {
       return [...prevItems, inputText];
     });
